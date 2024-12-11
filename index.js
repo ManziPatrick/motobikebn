@@ -30,7 +30,7 @@ const connectToMongoDb = () => {
 };
 
 // Start server
-const port = 5300;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Your server has been started on port ${port}`);
     connectToMongoDb();
